@@ -1,0 +1,1602 @@
+Result
+===========================================================
+15200  轮 lr  0.001  train loss:  0.3197855  focal loss 0.31327042  sia_loss 0.0065150843
+------------ val result -------------
+[[56862     1]
+ [    3    95]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.97      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.979433492375258
+MCC:  0.9793985003266561
+------------ test result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+save finish...
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------- log ------------------------------------
+C:\Users\86220\Anaconda3\python.exe C:/Users/86220/Desktop/mfe_code/first_Stage_main.py
+C:\Users\86220\Anaconda3\lib\site-packages\tensorflow\python\framework\dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+C:\Users\86220\Anaconda3\lib\site-packages\tensorflow\python\framework\dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+C:\Users\86220\Anaconda3\lib\site-packages\tensorflow\python\framework\dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+C:\Users\86220\Anaconda3\lib\site-packages\tensorflow\python\framework\dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+C:\Users\86220\Anaconda3\lib\site-packages\tensorflow\python\framework\dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+C:\Users\86220\Anaconda3\lib\site-packages\tensorflow\python\framework\dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+C:\Users\86220\Anaconda3\lib\site-packages\h5py\__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+this model is  FirstStage_3layerFeat_1_hasDecay
+choost batch task dataset....
+170589 3256
+679 256
+56863 98
+2021-07-25 14:48:19.869740: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+train a new model....
+<tf.Variable 'Mlp_embedding/encoder/mlp_layer0/dense/kernel:0' shape=(29, 64) dtype=float32_ref>
+<tf.Variable 'Mlp_embedding/encoder/mlp_layer0/dense/bias:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'Mlp_embedding/encoder/mlp_layer0/bn/batch_normalization/gamma:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'Mlp_embedding/encoder/mlp_layer0/bn/batch_normalization/beta:0' shape=(64,) dtype=float32_ref>
+<tf.Variable 'Mlp_embedding/encoder/mlp_layer1/dense/kernel:0' shape=(64, 32) dtype=float32_ref>
+<tf.Variable 'Mlp_embedding/encoder/mlp_layer1/dense/bias:0' shape=(32,) dtype=float32_ref>
+<tf.Variable 'Mlp_embedding/encoder/mlp_layer1/bn/batch_normalization/gamma:0' shape=(32,) dtype=float32_ref>
+<tf.Variable 'Mlp_embedding/encoder/mlp_layer1/bn/batch_normalization/beta:0' shape=(32,) dtype=float32_ref>
+<tf.Variable 'Mlp_embedding/encoder/mlp_layer2/dense/kernel:0' shape=(32, 16) dtype=float32_ref>
+<tf.Variable 'Mlp_embedding/encoder/mlp_layer2/dense/bias:0' shape=(16,) dtype=float32_ref>
+<tf.Variable 'Mlp_embedding/encoder/mlp_layer2/bn/batch_normalization/gamma:0' shape=(16,) dtype=float32_ref>
+<tf.Variable 'Mlp_embedding/encoder/mlp_layer2/bn/batch_normalization/beta:0' shape=(16,) dtype=float32_ref>
+<tf.Variable 'Cls_2uints/mlp_layer0/dense/kernel:0' shape=(16, 2) dtype=float32_ref>
+<tf.Variable 'Cls_2uints/mlp_layer0/dense/bias:0' shape=(2,) dtype=float32_ref>
+===========================================================
+1  轮 lr  0.01  train loss:  30.828703  focal loss 0.70034945  sia_loss 30.128353
+------------ val result -------------
+[[41566 15297]
+ [   60    38]]
+              precision    recall  f1-score   support
+
+           0       1.00      0.73      0.84     56863
+           1       0.00      0.39      0.00        98
+
+    accuracy                           0.73     56961
+   macro avg       0.50      0.56      0.42     56961
+weighted avg       1.00      0.73      0.84     56961
+
+pr_score:  0.002465846719839746
+GM:  0.03099764274465933
+MCC:  0.011094330677897708
+------------ test result -------------
+[[41333 15530]
+ [   62    36]]
+              precision    recall  f1-score   support
+
+           0       1.00      0.73      0.84     56863
+           1       0.00      0.37      0.00        98
+
+    accuracy                           0.73     56961
+   macro avg       0.50      0.55      0.42     56961
+weighted avg       1.00      0.73      0.84     56961
+
+pr_score:  0.0022185070876443356
+GM:  0.02914747576438804
+MCC:  0.008763443619853756
+135  epoch,  Emphasizing.....
+270  epoch,  Emphasizing.....
+===========================================================
+400  轮 lr  0.01  train loss:  0.58073145  focal loss 0.3214646  sia_loss 0.25926685
+------------ val result -------------
+[[56863     0]
+ [   75    23]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.23      0.38        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.62      0.69     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.40834758698173623
+GM:  0.4844521416518049
+MCC:  0.4841329709444615
+------------ test result -------------
+[[56863     0]
+ [   61    37]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.38      0.55        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.69      0.77     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.4900461957788559
+GM:  0.614451804788759
+MCC:  0.6141224919609043
+405  epoch,  Emphasizing.....
+540  epoch,  Emphasizing.....
+675  epoch,  Emphasizing.....
+===========================================================
+800  轮 lr  0.01  train loss:  0.67997026  focal loss 0.32570338  sia_loss 0.35426688
+------------ val result -------------
+[[56863     0]
+ [   73    25]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.26      0.41        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.63      0.70     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.41867543877862307
+GM:  0.5050762722761054
+MCC:  0.504752378836291
+------------ test result -------------
+[[56863     0]
+ [   60    38]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.39      0.56        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.69      0.78     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.4905130336798415
+GM:  0.6226998490772391
+MCC:  0.6223715824579493
+810  epoch,  Emphasizing.....
+945  epoch,  Emphasizing.....
+1080  epoch,  Emphasizing.....
+===========================================================
+1200  轮 lr  0.01  train loss:  0.4340654  focal loss 0.31789085  sia_loss 0.11617455
+------------ val result -------------
+[[56863     0]
+ [   69    29]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.30      0.46        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.65      0.73     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.4194316100424936
+GM:  0.5439837932759934
+MCC:  0.5436540467236054
+------------ test result -------------
+[[56863     0]
+ [   58    40]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.41      0.58        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.70      0.79     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.4904819164372898
+GM:  0.6388765649999399
+MCC:  0.6385509884561673
+1215  epoch,  Emphasizing.....
+1350  epoch,  Emphasizing.....
+1485  epoch,  Emphasizing.....
+===========================================================
+1600  轮 lr  0.01  train loss:  0.4487183  focal loss 0.32146358  sia_loss 0.12725471
+------------ val result -------------
+[[56863     0]
+ [   63    35]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.36      0.53        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.68      0.76     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.6158404194771756
+GM:  0.5976143046671968
+MCC:  0.5972835232694831
+------------ test result -------------
+[[56863     0]
+ [   52    46]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.47      0.64        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.73      0.82     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.8565332903720331
+GM:  0.6851187890446743
+MCC:  0.6848057404796829
+1620  epoch,  Emphasizing.....
+1755  epoch,  Emphasizing.....
+1890  epoch,  Emphasizing.....
+===========================================================
+2000  轮 lr  0.01  train loss:  0.4299521  focal loss 0.31769353  sia_loss 0.11225859
+------------ val result -------------
+[[56820    43]
+ [   43    55]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.56      0.56      0.56        98
+
+    accuracy                           1.00     56961
+   macro avg       0.78      0.78      0.78     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.3885674145292221
+GM:  0.5612244897959183
+MCC:  0.5604682862892444
+------------ test result -------------
+[[56858     5]
+ [   16    82]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.94      0.84      0.89        98
+
+    accuracy                           1.00     56961
+   macro avg       0.97      0.92      0.94     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.8971683513646064
+GM:  0.8880577081924297
+MCC:  0.887878509381911
+2025  epoch,  Emphasizing.....
+2160  epoch,  Emphasizing.....
+2295  epoch,  Emphasizing.....
+===========================================================
+2400  轮 lr  0.01  train loss:  0.32432625  focal loss 0.3170273  sia_loss 0.007298947
+------------ val result -------------
+[[56821    42]
+ [   41    57]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.58      0.58      0.58        98
+
+    accuracy                           1.00     56961
+   macro avg       0.79      0.79      0.79     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.5825181699499434
+GM:  0.578687658679514
+MCC:  0.5779578632026031
+------------ test result -------------
+[[56861     2]
+ [   21    77]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.97      0.79      0.87        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.89      0.93     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9330397888807938
+GM:  0.875113012593303
+MCC:  0.8749276780324622
+2430  epoch,  Emphasizing.....
+2565  epoch,  Emphasizing.....
+2700  epoch,  Emphasizing.....
+===========================================================
+2800  轮 lr  0.01  train loss:  0.34508902  focal loss 0.3134724  sia_loss 0.03161663
+------------ val result -------------
+[[56820    43]
+ [   28    70]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.62      0.71      0.66        98
+
+    accuracy                           1.00     56961
+   macro avg       0.81      0.86      0.83     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.4732277214640398
+GM:  0.6651901052377392
+MCC:  0.6645735388580918
+------------ test result -------------
+[[56858     5]
+ [   12    86]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.95      0.88      0.91        98
+
+    accuracy                           1.00     56961
+   macro avg       0.97      0.94      0.95     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9170228358780416
+GM:  0.9106777318979242
+MCC:  0.9105304392175855
+2835  epoch,  Emphasizing.....
+2970  epoch,  Emphasizing.....
+3105  epoch,  Emphasizing.....
+===========================================================
+3200  轮 lr  0.01  train loss:  0.32038775  focal loss 0.31329253  sia_loss 0.0070952172
+------------ val result -------------
+[[56820    43]
+ [   25    73]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.63      0.74      0.68        98
+
+    accuracy                           1.00     56961
+   macro avg       0.81      0.87      0.84     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.5426752070268439
+GM:  0.6846692570542676
+MCC:  0.6840824781878643
+------------ test result -------------
+[[56858     5]
+ [   11    87]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.95      0.89      0.92        98
+
+    accuracy                           1.00     56961
+   macro avg       0.97      0.94      0.96     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9219436287079463
+GM:  0.9162464418197178
+MCC:  0.9161073580913707
+3240  epoch,  Emphasizing.....
+3375  epoch,  Emphasizing.....
+3510  epoch,  Emphasizing.....
+===========================================================
+3600  轮 lr  0.01  train loss:  0.31417808  focal loss 0.31326932  sia_loss 0.0009087646
+------------ val result -------------
+[[56824    39]
+ [   19    79]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.67      0.81      0.73        98
+
+    accuracy                           1.00     56961
+   macro avg       0.83      0.90      0.87     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.5415434680682196
+GM:  0.7346374262489347
+MCC:  0.7341415060198105
+------------ test result -------------
+[[56861     2]
+ [    6    92]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.98      0.94      0.96        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9460960648684461
+GM:  0.9585413727004499
+MCC:  0.9584717488735628
+3645  epoch,  Emphasizing.....
+3780  epoch,  Emphasizing.....
+3915  epoch,  Emphasizing.....
+===========================================================
+4000  轮 lr  0.01  train loss:  0.32572672  focal loss 0.31330934  sia_loss 0.012417382
+------------ val result -------------
+[[56863     0]
+ [   27    71]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.72      0.84        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.86      0.92     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.8464731817354962
+GM:  0.8511696634152133
+MCC:  0.8509676568382696
+------------ test result -------------
+[[56863     0]
+ [    7    91]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.93      0.96        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.96      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.949067371194541
+GM:  0.9636241116594315
+MCC:  0.9635648046754115
+4050  epoch,  Emphasizing.....
+4185  epoch,  Emphasizing.....
+4320  epoch,  Emphasizing.....
+===========================================================
+4400  轮 lr  0.01  train loss:  0.5132483  focal loss 0.31718737  sia_loss 0.19606093
+------------ val result -------------
+[[56860     3]
+ [   22    76]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.96      0.78      0.86        98
+
+    accuracy                           1.00     56961
+   macro avg       0.98      0.89      0.93     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.813877933387517
+GM:  0.8637479085336497
+MCC:  0.8635448884351438
+------------ test result -------------
+[[56863     0]
+ [    6    92]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.94      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9488525484233272
+GM:  0.9689042833036098
+MCC:  0.9688531695241762
+4455  epoch,  Emphasizing.....
+4590  epoch,  Emphasizing.....
+4725  epoch,  Emphasizing.....
+===========================================================
+4800  轮 lr  0.01  train loss:  0.70679796  focal loss 0.3210819  sia_loss 0.38571602
+------------ val result -------------
+[[56838    25]
+ [   20    78]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.76      0.80      0.78        98
+
+    accuracy                           1.00     56961
+   macro avg       0.88      0.90      0.89     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.7799521603441146
+GM:  0.776359644496374
+MCC:  0.7759649115316153
+------------ test result -------------
+[[56862     1]
+ [    7    91]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.93      0.96        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.96      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9576170964057737
+GM:  0.9583727150068313
+MCC:  0.9583040072376151
+4860  epoch,  Emphasizing.....
+4995  epoch,  Emphasizing.....
+5130  epoch,  Emphasizing.....
+===========================================================
+5200  轮 lr  0.01  train loss:  0.31764406  focal loss 0.31327802  sia_loss 0.004366032
+------------ val result -------------
+[[56863     0]
+ [   19    79]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.81      0.89        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.90      0.95     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.8844380160138801
+GM:  0.8978432207126096
+MCC:  0.8976932572270989
+------------ test result -------------
+[[56863     0]
+ [    7    91]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.93      0.96        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.96      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9585330979977517
+GM:  0.9636241116594315
+MCC:  0.9635648046754115
+5265  epoch,  Emphasizing.....
+5400  epoch,  Emphasizing.....
+5535  epoch,  Emphasizing.....
+===========================================================
+5600  轮 lr  0.01  train loss:  0.3905141  focal loss 0.31408677  sia_loss 0.07642735
+------------ val result -------------
+[[56863     0]
+ [   24    74]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.76      0.86        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.88      0.93     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.8370155878225309
+GM:  0.8689660757568884
+MCC:  0.868782752801506
+------------ test result -------------
+[[56863     0]
+ [    9    89]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.91      0.95        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.95      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.949067371194541
+GM:  0.9529760045804524
+MCC:  0.9529005973204007
+5670  epoch,  Emphasizing.....
+5805  epoch,  Emphasizing.....
+5940  epoch,  Emphasizing.....
+===========================================================
+6000  轮 lr  0.01  train loss:  0.325909  focal loss 0.31336626  sia_loss 0.012542717
+------------ val result -------------
+[[56839    24]
+ [   15    83]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.78      0.85      0.81        98
+
+    accuracy                           1.00     56961
+   macro avg       0.89      0.92      0.90     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.8207970613626935
+GM:  0.8105375991863865
+MCC:  0.8101977920568134
+------------ test result -------------
+[[56861     2]
+ [    6    92]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.98      0.94      0.96        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9379877074755576
+GM:  0.9585413727004499
+MCC:  0.9584717488735628
+6075  epoch,  Emphasizing.....
+6210  epoch,  Emphasizing.....
+6345  epoch,  Emphasizing.....
+===========================================================
+6400  轮 lr  0.01  train loss:  0.31463417  focal loss 0.31328058  sia_loss 0.0013535919
+------------ val result -------------
+[[56828    35]
+ [   18    80]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.70      0.82      0.75        98
+
+    accuracy                           1.00     56961
+   macro avg       0.85      0.91      0.88     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.668664655433034
+GM:  0.7535776838808994
+MCC:  0.7531220690332749
+------------ test result -------------
+[[56861     2]
+ [    5    93]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.98      0.95      0.96        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9377675347983738
+GM:  0.9638470180033013
+MCC:  0.9637858711549178
+6480  epoch,  Emphasizing.....
+6615  epoch,  Emphasizing.....
+6750  epoch,  Emphasizing.....
+===========================================================
+6800  轮 lr  0.01  train loss:  0.3152113  focal loss 0.31326687  sia_loss 0.0019444132
+------------ val result -------------
+[[56833    30]
+ [   12    86]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.74      0.88      0.80        98
+
+    accuracy                           1.00     56961
+   macro avg       0.87      0.94      0.90     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.7771373817748709
+GM:  0.8065966589954385
+MCC:  0.8062393506856587
+------------ test result -------------
+[[56858     5]
+ [    5    93]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.95      0.95      0.95        98
+
+    accuracy                           1.00     56961
+   macro avg       0.97      0.97      0.97     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9570228564783806
+GM:  0.9489795918367347
+MCC:  0.9488916611964238
+6885  epoch,  Emphasizing.....
+7020  epoch,  Emphasizing.....
+7155  epoch,  Emphasizing.....
+===========================================================
+7200  轮 lr  0.01  train loss:  0.3194081  focal loss 0.31326514  sia_loss 0.006142935
+------------ val result -------------
+[[56862     1]
+ [    7    91]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.93      0.96        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.96      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9568863970090932
+GM:  0.9583727150068313
+MCC:  0.9583040072376151
+------------ test result -------------
+[[56863     0]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.96      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9891928127089901
+GM:  0.9793792286287205
+MCC:  0.9793447834689087
+7290  epoch,  Emphasizing.....
+7425  epoch,  Emphasizing.....
+7560  epoch,  Emphasizing.....
+===========================================================
+7600  轮 lr  0.01  train loss:  0.3136667  focal loss 0.3132816  sia_loss 0.0003851169
+------------ val result -------------
+[[56860     3]
+ [   13    85]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.97      0.87      0.91        98
+
+    accuracy                           1.00     56961
+   macro avg       0.98      0.93      0.96     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.952899137843831
+GM:  0.9153022960396395
+MCC:  0.915166153051701
+------------ test result -------------
+[[56862     1]
+ [    6    92]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.94      0.96        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.977698075341401
+GM:  0.9636810415688931
+MCC:  0.9636206239263148
+7695  epoch,  Emphasizing.....
+7830  epoch,  Emphasizing.....
+7965  epoch,  Emphasizing.....
+===========================================================
+8000  轮 lr  0.01  train loss:  0.3713193  focal loss 0.31326392  sia_loss 0.058055356
+------------ val result -------------
+[[56863     0]
+ [    7    91]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.93      0.96        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.96      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.949067371194541
+GM:  0.9636241116594315
+MCC:  0.9635648046754115
+------------ test result -------------
+[[56863     0]
+ [    6    92]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.94      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9997928051863911
+GM:  0.9689042833036098
+MCC:  0.9688531695241762
+8100  epoch,  Emphasizing.....
+8235  epoch,  Emphasizing.....
+8370  epoch,  Emphasizing.....
+===========================================================
+8400  轮 lr  0.01  train loss:  0.38434994  focal loss 0.31327054  sia_loss 0.071079396
+------------ val result -------------
+[[56831    32]
+ [    0    98]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.75      1.00      0.86        98
+
+    accuracy                           1.00     56961
+   macro avg       0.88      1.00      0.93     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.7999520412315713
+GM:  0.8682431421244592
+MCC:  0.8679988031824298
+------------ test result -------------
+[[56861     2]
+ [    0    98]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.98      1.00      0.99        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      1.00      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9785573413455394
+GM:  0.9899494936611666
+MCC:  0.9899320841295115
+8505  epoch,  Emphasizing.....
+8640  epoch,  Emphasizing.....
+8775  epoch,  Emphasizing.....
+===========================================================
+8800  轮 lr  0.01  train loss:  0.31681448  focal loss 0.31334972  sia_loss 0.0034647444
+------------ val result -------------
+[[56855     8]
+ [    8    90]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.92      0.92      0.92        98
+
+    accuracy                           1.00     56961
+   macro avg       0.96      0.96      0.96     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.8871615568010985
+GM:  0.9183673469387755
+MCC:  0.918226657914278
+------------ test result -------------
+[[56859     4]
+ [    5    93]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.96      0.95      0.95        98
+
+    accuracy                           1.00     56961
+   macro avg       0.98      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9476772030935213
+GM:  0.9538586964492807
+MCC:  0.9537796036579498
+8910  epoch,  Emphasizing.....
+9045  epoch,  Emphasizing.....
+9180  epoch,  Emphasizing.....
+===========================================================
+9200  轮 lr  0.01  train loss:  0.31905848  focal loss 0.31339777  sia_loss 0.0056607006
+------------ val result -------------
+[[56859     4]
+ [    5    93]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.96      0.95      0.95        98
+
+    accuracy                           1.00     56961
+   macro avg       0.98      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9373915087835281
+GM:  0.9538586964492807
+MCC:  0.9537796036579498
+------------ test result -------------
+[[56861     2]
+ [    5    93]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.98      0.95      0.96        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9674024229155588
+GM:  0.9638470180033013
+MCC:  0.9637858711549178
+9315  epoch,  Emphasizing.....
+9450  epoch,  Emphasizing.....
+9585  epoch,  Emphasizing.....
+===========================================================
+9600  轮 lr  0.01  train loss:  0.40020669  focal loss 0.31638572  sia_loss 0.08382096
+------------ val result -------------
+[[56862     1]
+ [    7    91]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.93      0.96        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.96      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9580200639235362
+GM:  0.9583727150068313
+MCC:  0.9583040072376151
+------------ test result -------------
+[[56863     0]
+ [    6    92]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.94      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9490673727356111
+GM:  0.9689042833036098
+MCC:  0.9688531695241762
+9720  epoch,  Emphasizing.....
+9855  epoch,  Emphasizing.....
+9990  epoch,  Emphasizing.....
+===========================================================
+10000  轮 lr  0.01  train loss:  0.5207015  focal loss 0.31807327  sia_loss 0.20262828
+------------ val result -------------
+[[56863     0]
+ [    8    90]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.92      0.96        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.96      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9388808472827334
+GM:  0.9583148474999099
+MCC:  0.9582474424216645
+------------ test result -------------
+[[56863     0]
+ [    5    93]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.95      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.97      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.959146486802882
+GM:  0.9741558354989898
+MCC:  0.9741130092500847
+10125  epoch,  Emphasizing.....
+10260  epoch,  Emphasizing.....
+10395  epoch,  Emphasizing.....
+===========================================================
+10400  轮 lr  0.001  train loss:  0.31765783  focal loss 0.31326354  sia_loss 0.004394304
+------------ val result -------------
+[[56859     4]
+ [    0    98]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.96      1.00      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       0.98      1.00      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9686029310518052
+GM:  0.9801960588196069
+MCC:  0.9801615825064584
+------------ test result -------------
+[[56862     1]
+ [    3    95]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.97      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9891753471108538
+GM:  0.979433492375258
+MCC:  0.9793985003266561
+save finish...
+10530  epoch,  Emphasizing.....
+10665  epoch,  Emphasizing.....
+10800  epoch,  Emphasizing.....
+===========================================================
+10800  轮 lr  0.001  train loss:  0.31744972  focal loss 0.3133236  sia_loss 0.0041261264
+------------ val result -------------
+[[56862     1]
+ [    2    96]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.98      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.99      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.999581315951522
+GM:  0.9846283318186123
+MCC:  0.9846019976424962
+------------ test result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.999270874683585
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+save finish...
+10935  epoch,  Emphasizing.....
+11070  epoch,  Emphasizing.....
+===========================================================
+11200  轮 lr  0.001  train loss:  0.32356194  focal loss 0.31326622  sia_loss 0.010295724
+------------ val result -------------
+[[56860     3]
+ [    1    97]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.97      0.99      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       0.98      0.99      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9887762394477183
+GM:  0.9798479682156443
+MCC:  0.9798129713478407
+------------ test result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9892773668921738
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+save finish...
+11205  epoch,  Emphasizing.....
+11340  epoch,  Emphasizing.....
+11475  epoch,  Emphasizing.....
+===========================================================
+11600  轮 lr  0.001  train loss:  0.3140856  focal loss 0.3132694  sia_loss 0.0008162033
+------------ val result -------------
+[[56859     4]
+ [    1    97]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.96      0.99      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.98      0.99      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9879641507729205
+GM:  0.9749851691262615
+MCC:  0.9749415957205713
+------------ test result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9890722972647845
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+save finish...
+11610  epoch,  Emphasizing.....
+11745  epoch,  Emphasizing.....
+11880  epoch,  Emphasizing.....
+===========================================================
+12000  轮 lr  0.001  train loss:  0.31340778  focal loss 0.3132707  sia_loss 0.00013710116
+------------ val result -------------
+[[56862     1]
+ [    2    96]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.98      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.99      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.989378376993184
+GM:  0.9846283318186123
+MCC:  0.9846019976424962
+------------ test result -------------
+[[56863     0]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.96      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.999581315951522
+GM:  0.9793792286287205
+MCC:  0.9793447834689087
+save finish...
+12015  epoch,  Emphasizing.....
+12150  epoch,  Emphasizing.....
+12285  epoch,  Emphasizing.....
+===========================================================
+12400  轮 lr  0.001  train loss:  0.31351838  focal loss 0.31330228  sia_loss 0.0002160931
+------------ val result -------------
+[[56862     1]
+ [    3    95]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.97      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9792949227637351
+GM:  0.979433492375258
+MCC:  0.9793985003266561
+------------ test result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9993782860691919
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+save finish...
+12420  epoch,  Emphasizing.....
+12555  epoch,  Emphasizing.....
+12690  epoch,  Emphasizing.....
+===========================================================
+12800  轮 lr  0.001  train loss:  0.36691976  focal loss 0.3133435  sia_loss 0.05357626
+------------ val result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9893904503364662
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+------------ test result -------------
+[[56862     1]
+ [    5    93]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.95      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.9689603006645854
+MCC:  0.9689082661712357
+save finish...
+12825  epoch,  Emphasizing.....
+12960  epoch,  Emphasizing.....
+13095  epoch,  Emphasizing.....
+===========================================================
+13200  轮 lr  0.001  train loss:  0.3264298  focal loss 0.3132726  sia_loss 0.013157232
+------------ val result -------------
+[[56862     1]
+ [    2    96]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.98      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.99      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9996876084685288
+GM:  0.9846283318186123
+MCC:  0.9846019976424962
+------------ test result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.999581315951522
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+save finish...
+13230  epoch,  Emphasizing.....
+13365  epoch,  Emphasizing.....
+13500  epoch,  Emphasizing.....
+===========================================================
+13600  轮 lr  0.001  train loss:  0.3162369  focal loss 0.31329465  sia_loss 0.002942253
+------------ val result -------------
+[[56862     1]
+ [    2    96]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.98      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.99      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.9846283318186123
+MCC:  0.9846019976424962
+------------ test result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.999480305850512
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+save finish...
+13635  epoch,  Emphasizing.....
+13770  epoch,  Emphasizing.....
+13905  epoch,  Emphasizing.....
+===========================================================
+14000  轮 lr  0.001  train loss:  0.33695152  focal loss 0.31328374  sia_loss 0.023667796
+------------ val result -------------
+[[56862     1]
+ [    3    95]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.97      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.979433492375258
+MCC:  0.9793985003266561
+------------ test result -------------
+[[56862     1]
+ [    5    93]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.95      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.9689603006645854
+MCC:  0.9689082661712357
+save finish...
+14040  epoch,  Emphasizing.....
+14175  epoch,  Emphasizing.....
+14310  epoch,  Emphasizing.....
+===========================================================
+14400  轮 lr  0.001  train loss:  0.3147125  focal loss 0.31327415  sia_loss 0.0014383586
+------------ val result -------------
+[[56863     0]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.96      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9795217517599539
+GM:  0.9793792286287205
+MCC:  0.9793447834689087
+------------ test result -------------
+[[56862     1]
+ [    5    93]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.95      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.9689603006645854
+MCC:  0.9689082661712357
+save finish...
+14445  epoch,  Emphasizing.....
+14580  epoch,  Emphasizing.....
+14715  epoch,  Emphasizing.....
+===========================================================
+14800  轮 lr  0.001  train loss:  0.31330106  focal loss 0.31328124  sia_loss 1.9829406e-05
+------------ val result -------------
+[[56863     0]
+ [    5    93]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.95      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.97      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9793080478573403
+GM:  0.9741558354989898
+MCC:  0.9741130092500847
+------------ test result -------------
+[[56862     1]
+ [    5    93]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.95      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.97      0.98     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9893904503364662
+GM:  0.9689603006645854
+MCC:  0.9689082661712357
+save finish...
+14850  epoch,  Emphasizing.....
+14985  epoch,  Emphasizing.....
+15120  epoch,  Emphasizing.....
+===========================================================
+15200  轮 lr  0.001  train loss:  0.3197855  focal loss 0.31327042  sia_loss 0.0065150843
+------------ val result -------------
+[[56862     1]
+ [    3    95]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.97      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.979433492375258
+MCC:  0.9793985003266561
+------------ test result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+save finish...
+15255  epoch,  Emphasizing.....
+15390  epoch,  Emphasizing.....
+15525  epoch,  Emphasizing.....
+===========================================================
+15600  轮 lr  0.001  train loss:  0.33108047  focal loss 0.31339568  sia_loss 0.017684784
+------------ val result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9791994937974184
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+------------ test result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+save finish...
+15660  epoch,  Emphasizing.....
+15795  epoch,  Emphasizing.....
+15930  epoch,  Emphasizing.....
+===========================================================
+16000  轮 lr  0.001  train loss:  0.33392265  focal loss 0.31327754  sia_loss 0.020645108
+------------ val result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9892818962765444
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+------------ test result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+save finish...
+16065  epoch,  Emphasizing.....
+16200  epoch,  Emphasizing.....
+16335  epoch,  Emphasizing.....
+===========================================================
+16400  轮 lr  0.001  train loss:  0.31608838  focal loss 0.3132766  sia_loss 0.0028117942
+------------ val result -------------
+[[56863     0]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       1.00      0.96      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       1.00      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9894978620302871
+GM:  0.9793792286287205
+MCC:  0.9793447834689087
+------------ test result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+save finish...
+16470  epoch,  Emphasizing.....
+16605  epoch,  Emphasizing.....
+16740  epoch,  Emphasizing.....
+===========================================================
+16800  轮 lr  0.001  train loss:  0.31818146  focal loss 0.3132827  sia_loss 0.004898756
+------------ val result -------------
+[[56862     1]
+ [    3    95]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.97      0.98        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9892818962765444
+GM:  0.979433492375258
+MCC:  0.9793985003266561
+------------ test result -------------
+[[56862     1]
+ [    4    94]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56863
+           1       0.99      0.96      0.97        98
+
+    accuracy                           1.00     56961
+   macro avg       0.99      0.98      0.99     56961
+weighted avg       1.00      1.00      1.00     56961
+
+pr_score:  0.9994739045659151
+GM:  0.9742109644334442
+MCC:  0.974167405377724
+save finish...
+16875  epoch,  Emphasizing.....
+17010  epoch,  Emphasizing.....
